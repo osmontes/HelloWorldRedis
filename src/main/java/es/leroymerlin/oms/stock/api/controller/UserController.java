@@ -19,7 +19,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "Hello", method = RequestMethod.GET, produces = {
+    @RequestMapping(value = "Users", method = RequestMethod.GET, produces = {
             MediaType.APPLICATION_JSON_VALUE})
     public List<User> getAllUsers() {
         log.info("Get All Users");
