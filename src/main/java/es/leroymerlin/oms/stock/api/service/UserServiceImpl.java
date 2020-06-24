@@ -32,4 +32,12 @@ public class UserServiceImpl implements UserService {
     public List<User> findAllByName(String name) {
         return userRepository.findAllByName(name);
     }
+
+    @Override
+    public User save(String name) {
+        User user = new User();
+        user.setId(UUID.randomUUID());
+        user.setName(name);
+        return userRepository.save(user);
+    }
 }

@@ -10,4 +10,5 @@ public interface UserService {
     List<User> findAll();
     User findById(UUID uuid);
     List<User> findAllByName(String name);
+    User save(String name);
 }
