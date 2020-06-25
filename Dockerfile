@@ -1,8 +1,2 @@
-FROM openjdk:8
-VOLUME /tmp
-RUN mkdir /application
-COPY . /application
-WORKDIR /application
-RUN /application/mvnw install #if you use gradle change it to /application/gradlew build
-RUN mv /application/target/*.jar /application/app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/application/app.jar"]
+FROM eu.gcr.io/gcp-tooling-pro-eslm/github.com/adeo/lmes-docker-base-images/base-java-maven-jdk-11-openj9-builder:v1.7.0 AS builder
+FROM eu.gcr.io/gcp-tooling-pro-eslm/github.com/adeo/lmes-docker-base-images/base-java-maven-jdk-11-openj9-runner:v1.7.0
