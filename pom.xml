@@ -89,7 +89,7 @@
                 <version>2.4.0</version>
                 <configuration>
                     <to>
-                        <image>eu.gcr.io/leroymerlin-pruebas/stock-api</image>
+                        <image>eu.gcr.io/supply-chain-dev-eslm/stock-api</image>
                     </to>
                 </configuration>
             </plugin>
